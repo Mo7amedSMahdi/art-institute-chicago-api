@@ -144,3 +144,9 @@ header {
 
   --gap: 2rem;
 }
+
+.header-nav span {
+  margin-left: 0.3rem;
+  font-size: 0.7rem;
+  font-family: var(--ff-gotham);
+}

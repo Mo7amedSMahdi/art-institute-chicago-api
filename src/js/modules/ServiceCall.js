@@ -8,4 +8,4 @@ const getArtWorks = async () => {
   return result.json();
 };
 
-export default { getArtWorks };
+export { getArtWorks };
