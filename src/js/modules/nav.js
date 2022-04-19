@@ -1,9 +1,8 @@
 import { getArtWorksCount } from './counters.js';
+
 const nav = document.querySelector('.header-nav');
 
-const ArtWorksCount = async () => {
-  return await getArtWorksCount().then((result) => result);
-};
+const ArtWorksCount = async () => getArtWorksCount().then((result) => result);
 
 const renderNavCounters = async () => {
   const artworksCount = await ArtWorksCount();
