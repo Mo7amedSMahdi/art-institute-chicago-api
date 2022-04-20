@@ -7,5 +7,4 @@ const getArtWorks = async () => {
   });
   return result.json();
 };
-
 export { getArtWorks };
