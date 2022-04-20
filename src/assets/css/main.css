@@ -135,6 +135,15 @@ input[type='reset'] {
   gap: 1rem;
 }
 
+.btn {
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+}
+
+.btn--primary {
+  border: 2px solid black;
+}
+
 /* Header Section */
 
 header {
