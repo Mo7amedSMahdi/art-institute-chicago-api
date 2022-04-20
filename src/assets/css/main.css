@@ -119,7 +119,7 @@ input[type='reset'] {
   gap: var(--gap, 1rem);
 }
 
-.flex-column {
+.flex--column {
   flex-direction: column;
 }
 
@@ -149,4 +149,33 @@ header {
   margin-left: 0.3rem;
   font-size: 0.7rem;
   font-family: var(--ff-gotham);
+}
+
+/* Header Section */
+
+.artworks {
+  padding: 1.5rem 4rem;
+}
+
+.artworks-list {
+  grid-template-columns: repeat(3, 1fr);
+
+  --gap: 2rem;
+}
+
+.artwork {
+  align-items: center;
+  justify-content: flex-start;
+
+  --gap: 1rem;
+}
+
+.artwork-body {
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+
+.artwork-body img {
+  max-width: 24px;
 }
