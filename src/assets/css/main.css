@@ -111,3 +111,42 @@ input[type='reset'] {
     scroll-behavior: auto !important;
   }
 }
+
+/* Utility classes */
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Header Section */
+
+header {
+  padding: 1.5rem 4rem;
+  align-items: center;
+  justify-content: flex-start;
+
+  --gap: 2rem;
+}
+
+.header-nav span {
+  margin-left: 0.3rem;
+  font-size: 0.7rem;
+  font-family: var(--ff-gotham);
+}
