@@ -150,3 +150,13 @@ header {
   font-size: 0.7rem;
   font-family: var(--ff-gotham);
 }
+
+.footer {
+  position: fixed;
+  line-height: 100px;
+  padding-left: 3rem;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(88, 84, 84);
+  color: white;
+}
