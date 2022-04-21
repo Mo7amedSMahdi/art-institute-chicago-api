@@ -7,11 +7,7 @@ const getArtWorksCount = async () => {
 
 const getLikesCount = async (artworkId) => {
   let result = await getLikes().then((result) => result);
-  result = result.filter((like) => like.item_id === '38774');
-  console.log(result);
-  // result.forEach((like) => {
-  //   console.log(like);
-  // });
+  result = result.filter((like) => like.item_id === artworkId);
 };
 
 export { getArtWorksCount, getLikesCount };
