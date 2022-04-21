@@ -23,4 +23,12 @@ const addLike = async (artworkID) => {
   });
 };
 
-export { getArtWorks, addLike };
+const getLikes = async () => {
+  const result = await fetch(`${involvmentUrl}likes`, {
+    method: 'GET',
+    headers: { 'Content-Type': 'application/json' },
+  });
+  return result.json();
+};
+
+export { getArtWorks, addLike, getLikes };
