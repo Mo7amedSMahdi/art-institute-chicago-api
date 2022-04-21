@@ -144,6 +144,13 @@ input[type='reset'] {
   border: 2px solid black;
 }
 
+.btn--icon {
+  display: block;
+  width: 29px;
+  padding: 0;
+  margin: 0;
+}
+
 /* Header Section */
 
 header {
@@ -187,8 +194,12 @@ header {
   width: 100%;
 }
 
-.artwork-body img {
-  max-width: 24px;
+.artwork-body h2 {
+  flex: 1.8 0 0;
+}
+
+.artwork-body button {
+  flex: 0.2 0 0;
 }
 
 .footer {
