@@ -3,11 +3,18 @@ import { getArtwork } from './ServiceCall.js';
 const modal = document.querySelector('.modal');
 const body = document.querySelector('body');
 
+const hideModal = (btn) => {
+  btn.addEventListener('click', () => {
+    modal.classList.add('hidden');
+    body.classList.remove('no-scroll');
+    modal.innerHTML = '';
+  });
+};
+
 const showModal = async (artworkId) => {
   modal.classList.remove('hidden');
   body.classList.add('no-scroll');
   const result = await getArtwork(artworkId).then((result) => result);
-  //   console.log(`line8:::${JSON.stringify(result)}`);
   modal.innerHTML = `<div class="modal-dialog flex flex--column">
             <div class="modal-header">
                 <button type="button" class="close-modal" aria-label="close modal" data-close>
@@ -38,14 +45,6 @@ const showModal = async (artworkId) => {
 
   const closeBtn = modal.querySelector('.close-modal');
   hideModal(closeBtn);
-};
-
-const hideModal = (btn) => {
-  btn.addEventListener('click', () => {
-    modal.classList.add('hidden');
-    body.classList.remove('no-scroll');
-    modal.innerHTML = '';
-  });
 };
 
 export { showModal };

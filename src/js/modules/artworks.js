@@ -1,5 +1,5 @@
 import { getArtWorks, addLike, getLikes } from './ServiceCall.js';
-import { showModal, hideModal } from './pupup.js';
+import { showModal } from './pupup.js';
 
 const container = document.querySelector('.artworks-list');
 let likeButtons;
@@ -45,7 +45,7 @@ const renderArtworks = async () => {
   const commentButtons = document.querySelectorAll('[data-target="comment"]');
 
   commentButtons.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
+    btn.addEventListener('click', () => {
       showModal(btn.dataset.id);
     });
   });
