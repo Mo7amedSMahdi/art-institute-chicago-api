@@ -5,9 +5,9 @@ const getArtWorksCount = async () => {
   return result;
 };
 
-const getLikesCount = async (artworkId) => {
-  let result = await getLikes().then((result) => result);
-  result = result.filter((like) => like.item_id === artworkId);
+const getLikesCount = async () => {
+  const result = await getLikes().then((result) => result);
+  return result.length;
 };
 
 export { getArtWorksCount, getLikesCount };

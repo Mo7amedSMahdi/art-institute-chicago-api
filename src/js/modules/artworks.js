@@ -1,13 +1,24 @@
-import { getArtWorks, addLike } from './ServiceCall.js';
+import { getArtWorks, addLike, getLikes } from './ServiceCall.js';
 
 const container = document.querySelector('.artworks-list');
 let likeButtons;
+
 const renderArtworks = async () => {
   let artworkElements = '';
   container.innerHTML = 'fetching data...';
   const artworkArray = await getArtWorks().then((result) => result);
+  const likesArray = await getLikes().then((result) => result);
 
   artworkArray.data.forEach((artwork) => {
+    let likesCount = 0;
+    const likes = likesArray.filter(
+      /* eslint-disable */
+      (element) => element.item_id == artwork.id
+      /* eslint-enable */
+    );
+    if (likes.length > 0) {
+      likesCount = likes[0].likes;
+    }
     artworkElements += `<div data-id="${artwork.id}" class="artwork flex flex--column">
                       <div class="artwork-header">
                           <div class="header-image">
@@ -16,8 +27,11 @@ const renderArtworks = async () => {
                       </div>
                       <div class="artwork-body flex">
                           <h2>${artwork.title}</h2>
-                          <button data-target="like" data-id="${artwork.id}" type="button" class="btn btn--icon">
+                          <div class="body-likes flex--column">
+                          <button data-target="like" data-id="${artwork.id}" type="button" class="btn btn--icon ">
                           <img src="./images/heart.svg" alt="heart icon"></button>
+                          <p>${likesCount}</p>
+                          </div>
                       </div>
                       <div class="artwork-buttons flex flex--column">
                           <button type="button" class="btn btn--primary">Comments</button>
@@ -29,7 +43,10 @@ const renderArtworks = async () => {
   likeButtons = document.querySelectorAll('[data-target="like"]');
   likeButtons.forEach((likeButton) => {
     likeButton.addEventListener('click', async () => {
+      const body = likeButton.parentElement;
       const artworkID = likeButton.dataset.id;
+      const likeCounter = body.querySelector('p');
+      likeCounter.innerText = parseInt(likeCounter.innerText, 10) + 1;
       await addLike(artworkID);
       const icon = likeButton.querySelector('img');
       icon.src = './images/heart-filled.svg';
