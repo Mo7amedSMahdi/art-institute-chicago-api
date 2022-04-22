@@ -1,4 +1,4 @@
-import { getArtWorks, addLike, getLikes } from './ServiceCall.js';
+import { getArtWorks, addLike } from './ServiceCall.js';
 import { renderModal } from './pupup.js';
 import { getLikesCount } from './counters.js';
 
@@ -13,6 +13,12 @@ const renderArtworks = async () => {
 
   artworkArray.data.forEach((artwork) => {
     let likesCount = 0;
+    let imageLink;
+    if (artwork.image_id !== null) {
+      imageLink = `https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`;
+    } else {
+      imageLink = './images/no-image.png';
+    }
     const likes = likesArray.filter(
       /* eslint-disable */
       (element) => element.item_id == artwork.id
@@ -24,7 +30,7 @@ const renderArtworks = async () => {
     artworkElements += `<div data-id="${artwork.id}" class="artwork flex flex--column">
                       <div class="artwork-header">
                           <div class="header-image">
-                              <img src="https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg" alt="">
+                              <img src="${imageLink}" alt="">
                           </div>
                       </div>
                       <div class="artwork-body flex">
@@ -37,7 +43,6 @@ const renderArtworks = async () => {
                       </div>
                       <div class="artwork-buttons flex flex--column">
                           <button data-id="${artwork.id}" data-target="comment" type="button" class="btn btn--primary">Comments</button>
-                          <button data-id="${artwork.id}" data-target="reserveation" type="button" class="btn btn--primary">Reservation</button>
                       </div>
                   </div>`;
   });

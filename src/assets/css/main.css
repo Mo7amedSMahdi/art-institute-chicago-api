@@ -183,6 +183,7 @@ header {
 
 .artworks-list {
   grid-template-columns: repeat(3, 1fr);
+  min-height: calc(100vh - 14rem);
 
   --gap: 2rem;
 }
