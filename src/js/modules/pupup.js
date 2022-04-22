@@ -62,7 +62,7 @@ const renderModal = async (artworkId) => {
     if (result.data.image_id !== null) {
       imageLink = `https://www.artic.edu/iiif/2/${result.data.image_id}/full/843,/0/default.jpg`;
     } else {
-      imageLink = './images/no-image.png';
+      imageLink = './art-institute-chicago-api/images/no-image.png';
     }
     return result;
   });
