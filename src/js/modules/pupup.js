@@ -1,4 +1,5 @@
-import { getArtwork, getComment, addNewComment } from './ServiceCall.js';
+import { getArtwork, getComments, addNewComment } from './ServiceCall.js';
+import { getNumberofComments } from './counters.js';
 
 const modal = document.querySelector('.modal');
 const body = document.querySelector('body');
@@ -12,15 +13,16 @@ const hideModal = (btn) => {
 };
 
 const renderComment = async (artworkId) => {
-  const comments = await getComment(artworkId).then((result) => result);
+  const comments = await getComments(artworkId).then((result) => result);
+  const numberOfComments = await getNumberofComments(artworkId);
   const commentsContainer = modal.querySelector('.comments');
-  if (comments.error) {
+  if (numberOfComments <= 0) {
     commentsContainer.innerHTML = `<h2> Comments (0)</h2>
                     <div class="comment-list flex flex--column">
                         <p>No Comments</p>
                     </div>`;
   } else {
-    commentsContainer.innerHTML = `<h2> Comments (${comments.length})</h2>
+    commentsContainer.innerHTML = `<h2> Comments (${numberOfComments})</h2>
                     <div class="comment-list flex flex--column">
                     
                     </div>`;
