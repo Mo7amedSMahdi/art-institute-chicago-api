@@ -43,6 +43,14 @@ const getArtwork = async (artworkId) => {
   return result.json();
 };
 
+const getComment = async (itemId) => {
+  const result = await fetch(`${involvmentUrl}comments?item_id=${itemId}`, {
+    method: 'GET',
+    headers: { 'Content-Type': 'application/json' },
+  });
+  return result.json();
+};
+
 export {
-  getArtWorks, addLike, getLikes, getArtwork,
+  getArtWorks, addLike, getLikes, getArtwork, getComment,
 };

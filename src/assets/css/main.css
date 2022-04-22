@@ -246,6 +246,11 @@ header {
   align-items: center;
 }
 
+.modal-content {
+  justify-content: center;
+  align-items: center;
+}
+
 .artwork-desc {
   justify-content: center;
   align-items: center;
@@ -256,6 +261,18 @@ header {
   width: 100%;
 }
 
+.comments {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.comment-list {
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 .footer {
   padding: 2rem 3rem;
   bottom: 0;
@@ -263,16 +280,3 @@ header {
   background-color: rgb(88, 84, 84);
   color: white;
 }
-<<<<<<< HEAD
-
-.footer {
-  position: fixed;
-  line-height: 100px;
-  padding-left: 3rem;
-  bottom: 0;
-  width: 100%;
-  background-color: rgb(88, 84, 84);
-  color: white;
-}
-=======
->>>>>>> c1904e6f85f2f12bb5d56728b3cf1882cebe9ef7

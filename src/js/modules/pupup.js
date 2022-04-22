@@ -1,4 +1,4 @@
-import { getArtwork } from './ServiceCall.js';
+import { getArtwork, getComment } from './ServiceCall.js';
 
 const modal = document.querySelector('.modal');
 const body = document.querySelector('body');
@@ -9,6 +9,28 @@ const hideModal = (btn) => {
     body.classList.remove('no-scroll');
     modal.innerHTML = '';
   });
+};
+
+const renderComment = async (artworkId) => {
+  const comments = await getComment(artworkId).then((result) => result);
+  const commentsContainer = modal.querySelector('.comments');
+  if (comments.error) {
+    commentsContainer.innerHTML = `<h2> Comments (0)</h2>
+                    <div class="comment-list flex flex--column">
+                        <p>No Comments</p>
+                    </div>`;
+  } else {
+    commentsContainer.innerHTML = `<h2> Comments (${comments.length})</h2>
+                    <div class="comment-list flex flex--column">
+                    
+                    </div>`;
+    const commentList = commentsContainer.querySelector('.comment-list');
+    comments.forEach((element) => {
+      commentList.innerHTML += `<div class="comment">
+                        <p>${element.creation_date} ${element.username}: ${element.comment}</p>
+                    </div>`;
+    });
+  }
 };
 
 const showModal = async (artworkId) => {
@@ -29,7 +51,7 @@ const showModal = async (artworkId) => {
                     </div>
                 </div>
             </div>
-            <div class="modal-content">
+            <div class="modal-content flex flex--column">
                 <div class="artwork-desc flex flex--column">
                     <div class="flex">
                         <p>Artist: ${result.data.artist_title}</p>
@@ -40,9 +62,12 @@ const showModal = async (artworkId) => {
                         <p>End Date: ${result.data.date_end}</p>
                     </div>
                 </div>
+                <div class="comments flex flex--column">
+                    
+                </div>
             </div>
         </div>`;
-
+  renderComment(artworkId);
   const closeBtn = modal.querySelector('.close-modal');
   hideModal(closeBtn);
 };
