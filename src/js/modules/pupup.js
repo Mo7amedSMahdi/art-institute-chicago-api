@@ -1,4 +1,4 @@
-import { getArtwork, getComment } from './ServiceCall.js';
+import { getArtwork, getComment, addNewComment } from './ServiceCall.js';
 
 const modal = document.querySelector('.modal');
 const body = document.querySelector('body');
@@ -33,7 +33,26 @@ const renderComment = async (artworkId) => {
   }
 };
 
-const showModal = async (artworkId) => {
+const addComment = async (artworkId) => {
+  const form = document.querySelector('.add-comment-form');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const [username, comment] = form.elements;
+    if (username.value.trim() && comment.value.trim()) {
+      const commentJson = {
+        item_id: artworkId,
+        username: username.value.trim(),
+        comment: comment.value.trim(),
+      };
+      await addNewComment(commentJson);
+      renderComment(artworkId);
+      username.value = '';
+      comment.value = '';
+    }
+  });
+};
+
+const renderModal = async (artworkId) => {
   modal.classList.remove('hidden');
   body.classList.add('no-scroll');
   const result = await getArtwork(artworkId).then((result) => result);
@@ -69,8 +88,8 @@ const showModal = async (artworkId) => {
                 <div class="add-comment flex flex--column"">
             <h2>Add a Comment</h2>
             <form class="add-comment-form flex flex--column" action="/">
-                <input type="text" id="username" name="username" placeholder="Your Name" />
-                <textarea id="username" name="username" placeholder="Your Insights"></textarea>
+                <input type="text" id="username" name="username" placeholder="Your Name" required/>
+                <textarea id="comment" name="comment" placeholder="Your Insights" required></textarea>
                 <button type="submit" class="btn btn--primary">Comment</button>
             </form>
         </div>
@@ -78,8 +97,9 @@ const showModal = async (artworkId) => {
             </div>
         </div>`;
   renderComment(artworkId);
+  addComment(artworkId);
   const closeBtn = modal.querySelector('.close-modal');
   hideModal(closeBtn);
 };
 
-export { showModal };
+export { renderModal };
