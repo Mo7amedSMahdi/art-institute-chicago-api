@@ -19,11 +19,7 @@ const renderArtworks = async () => {
     } else {
       imageLink = './images/no-image.png';
     }
-    const likes = likesArray.filter(
-      /* eslint-disable */
-      (element) => element.item_id == artwork.id
-      /* eslint-enable */
-    );
+    const likes = likesArray.filter((e) => e.item_id === artwork.id.toString());
     if (likes.length > 0) {
       likesCount = likes[0].likes;
     }
