@@ -17,7 +17,7 @@ const renderArtworks = async () => {
     if (artwork.image_id !== null) {
       imageLink = `https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`;
     } else {
-      imageLink = './images/no-image.png';
+      imageLink = './art-institute-chicago-api/images/no-image.png';
     }
     const likes = likesArray.filter((e) => e.item_id === artwork.id.toString());
     if (likes.length > 0) {
@@ -33,7 +33,7 @@ const renderArtworks = async () => {
                           <h2>${artwork.title}</h2>
                           <div class="body-likes flex--column">
                           <button data-target="like" data-id="${artwork.id}" type="button" class="btn btn--icon ">
-                          <img src="./images/heart.svg" alt="heart icon"></button>
+                          <img src="./art-institute-chicago-api/images/heart.svg" alt="heart icon"></button>
                           <p>${likesCount}</p>
                           </div>
                       </div>
@@ -60,7 +60,7 @@ const renderArtworks = async () => {
       likeCounter.innerText = parseInt(likeCounter.innerText, 10) + 1;
       await addLike(artworkID);
       const icon = likeButton.querySelector('img');
-      icon.src = './images/heart-filled.svg';
+      icon.src = './art-institute-chicago-api/images/heart-filled.svg';
     });
   });
 };

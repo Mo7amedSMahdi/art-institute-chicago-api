@@ -26,7 +26,7 @@ The Art Institute of Chicago's API provides JSON-formatted data as a REST-style 
 
 ## Live Demo
 
-> Soon.
+![Live demo](https://mo7amedsmahdi.github.io/art-institute-chicago-api/)
 
 ## Getting Started
 
