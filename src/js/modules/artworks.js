@@ -1,5 +1,4 @@
-import { getArtWorks, addLike } from './ServiceCall.js';
-import { getLikes } from './ServiceCall.js';
+import { getArtWorks, addLike, getLikes } from './ServiceCall.js';
 
 const container = document.querySelector('.artworks-list');
 let likeButtons;
@@ -12,14 +11,14 @@ const renderArtworks = async () => {
 
   artworkArray.data.forEach((artwork) => {
     let likesCount = 0;
-    const likes = likesArray.filter((element) => {
-      return element.item_id == parseInt(artwork.id, 10);
-    });
-    if (likes.length > 0) {
-      likesCount = likes[0].likes;
-    }
-    console.log(`line21::${JSON.stringify(artwork)}`);
-
+    const likes = likesArray.find(
+      /* eslint-disable */
+      (element) => element.item_id == artwork.id
+    );
+    console.log(`line19:::${JSON.stringify(likes)}`);
+    // if (likes.length > 0) {
+    //   likesCount = likes[0].likes;
+    // }
     artworkElements += `<div data-id="${artwork.id}" class="artwork flex flex--column">
                       <div class="artwork-header">
                           <div class="header-image">

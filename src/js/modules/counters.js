@@ -6,7 +6,7 @@ const getArtWorksCount = async () => {
 };
 
 const getLikesCount = async () => {
-  let result = await getLikes().then((result) => result);
+  const result = await getLikes().then((result) => result);
   return result.length;
 };
 
