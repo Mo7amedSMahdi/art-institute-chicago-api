@@ -34,8 +34,8 @@ const renderArtworks = async () => {
                           </div>
                       </div>
                       <div class="artwork-buttons flex flex--column">
-                          <button type="button" class="btn btn--primary">Comments</button>
-                          <button type="button" class="btn btn--primary">Reservation</button>
+                          <button data-id="${artwork.id}" data-target="comment" type="button" class="btn btn--primary">Comments</button>
+                          <button data-id="${artwork.id}" data-target="reserveation" type="button" class="btn btn--primary">Reservation</button>
                       </div>
                   </div>`;
   });
