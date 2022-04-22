@@ -3,7 +3,7 @@ const appID = 'Ea05s8iIppToZ9bgBQcY';
 const involvmentUrl = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appID}/`;
 
 const getArtWorks = async () => {
-  const result = await fetch(`${baseUrl}artworks`, {
+  const result = await fetch(`${baseUrl}artworks?fields=id,image_id,title`, {
     method: 'GET',
     headers: { 'Content-Type': 'application/json' },
   });

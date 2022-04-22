@@ -11,14 +11,14 @@ const renderArtworks = async () => {
 
   artworkArray.data.forEach((artwork) => {
     let likesCount = 0;
-    const likes = likesArray.filter(
+    const likes = likesArray.find(
       /* eslint-disable */
       (element) => element.item_id == artwork.id
-      /* eslint-enable */
     );
-    if (likes.length > 0) {
-      likesCount = likes[0].likes;
-    }
+    console.log(`line19:::${JSON.stringify(likes)}`);
+    // if (likes.length > 0) {
+    //   likesCount = likes[0].likes;
+    // }
     artworkElements += `<div data-id="${artwork.id}" class="artwork flex flex--column">
                       <div class="artwork-header">
                           <div class="header-image">
