@@ -2,7 +2,7 @@
 
 # Art Institute Chicago api
 
-The leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved on external API.
+The Art Institute of Chicago's API provides JSON-formatted data as a REST-style service that allows developers to explore and integrate the museum’s public data into their projects. This API is the same tool that powers their website, their mobile app, and many other technologies in the museum.
 
 # Screen Shots
 
