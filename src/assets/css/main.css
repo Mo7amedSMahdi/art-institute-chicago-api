@@ -152,9 +152,7 @@ header {
 }
 
 .footer {
-  position: fixed;
-  line-height: 100px;
-  padding-left: 3rem;
+  padding: 2rem 3rem;
   bottom: 0;
   width: 100%;
   background-color: rgb(88, 84, 84);
