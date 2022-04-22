@@ -1,7 +1,8 @@
 const baseUrl = 'https://api.artic.edu/api/v1/';
 const appID = 'Ea05s8iIppToZ9bgBQcY';
 const involvmentUrl = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appID}/`;
-const fields = 'id,image_id,title,date_start,date_end,place_of_origin,artist_title';
+const fields =
+  'id,image_id,title,date_start,date_end,place_of_origin,artist_title';
 
 const getArtWorks = async () => {
   const result = await fetch(`${baseUrl}artworks?fields=${fields}`, {
@@ -38,12 +39,12 @@ const getArtwork = async (artworkId) => {
     {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' },
-    },
+    }
   );
   return result.json();
 };
 
-const getComment = async (itemId) => {
+const getComments = async (itemId) => {
   const result = await fetch(`${involvmentUrl}comments?item_id=${itemId}`, {
     method: 'GET',
     headers: { 'Content-Type': 'application/json' },
@@ -64,6 +65,6 @@ export {
   addLike,
   getLikes,
   getArtwork,
-  getComment,
+  getComments,
   addNewComment,
 };

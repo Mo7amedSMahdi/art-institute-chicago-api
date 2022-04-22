@@ -1,5 +1,6 @@
 import { getArtWorks, addLike, getLikes } from './ServiceCall.js';
 import { renderModal } from './pupup.js';
+import { getLikesCount } from './counters.js';
 
 const container = document.querySelector('.artworks-list');
 let likeButtons;
@@ -8,7 +9,7 @@ const renderArtworks = async () => {
   let artworkElements = '';
   container.innerHTML = 'fetching data...';
   const artworkArray = await getArtWorks().then((result) => result);
-  const likesArray = await getLikes().then((result) => result);
+  const likesArray = await getLikesCount();
 
   artworkArray.data.forEach((artwork) => {
     let likesCount = 0;
