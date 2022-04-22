@@ -57,7 +57,15 @@ const addComment = async (artworkId) => {
 const renderModal = async (artworkId) => {
   modal.classList.remove('hidden');
   body.classList.add('no-scroll');
-  const result = await getArtwork(artworkId).then((result) => result);
+  let imageLink;
+  const result = await getArtwork(artworkId).then((result) => {
+    if (result.data.image_id !== null) {
+      imageLink = `https://www.artic.edu/iiif/2/${result.data.image_id}/full/843,/0/default.jpg`;
+    } else {
+      imageLink = './images/no-image.png';
+    }
+    return result;
+  });
   modal.innerHTML = `<div class="modal-dialog flex flex--column">
             <div class="modal-header">
                 <button type="button" class="close-modal" aria-label="close modal" data-close>
@@ -65,7 +73,7 @@ const renderModal = async (artworkId) => {
                 </button>
                 <div class="header-content flex flex--column">
                     <div class="modal-image">
-                        <img src="https://www.artic.edu/iiif/2/${result.data.image_id}/full/843,/0/default.jpg" alt="no-image provided">
+                        <img src="${imageLink}" alt="no-image provided">
                     </div>
                     <div class="modal-title">
                         <h2>${result.data.title}</h2>
