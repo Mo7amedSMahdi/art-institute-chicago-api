@@ -65,6 +65,16 @@ const showModal = async (artworkId) => {
                 <div class="comments flex flex--column">
                     
                 </div>
+
+                <div class="add-comment flex flex--column"">
+            <h2>Add a Comment</h2>
+            <form class="add-comment-form flex flex--column" action="/">
+                <input type="text" id="username" name="username" placeholder="Your Name" />
+                <textarea id="username" name="username" placeholder="Your Insights"></textarea>
+                <button type="submit" class="btn btn--primary">Comment</button>
+            </form>
+        </div>
+
             </div>
         </div>`;
   renderComment(artworkId);
