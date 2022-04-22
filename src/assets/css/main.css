@@ -167,7 +167,7 @@ header {
   font-family: var(--ff-gotham);
 }
 
-/* Header Section */
+/* Artworks Section */
 
 .artworks {
   padding: 1.5rem 4rem;
@@ -196,6 +196,15 @@ header {
 
 .artwork-body h2 {
   flex: 1.8 0 0;
+}
+
+.body-likes {
+  justify-content: center;
+  align-items: center;
+}
+
+.body-likes p {
+  text-align: center;
 }
 
 .artwork-body button {
