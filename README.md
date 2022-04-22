@@ -4,9 +4,17 @@
 
 The Art Institute of Chicago's API provides JSON-formatted data as a REST-style service that allows developers to explore and integrate the museum’s public data into their projects. This API is the same tool that powers their website, their mobile app, and many other technologies in the museum.
 
-# Screen Shots
+<h2 align="center">
+  Screen Shots 📝
+</h2>
 
-> Comming Soon.
+|                                                                                       **Interface 1**                                                                                        |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| <img src="https://github.com/Mo7amedSMahdi/art-institute-chicago-api/blob/2bf50a50a71b2e278f147a2d51bde35cefad6790/src/assets/images/screenshots/screenshot2.png" width="1000" height="500"> |
+
+|                                                                                       **Interface 2**                                                                                        |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| <img src="https://github.com/Mo7amedSMahdi/art-institute-chicago-api/blob/2bf50a50a71b2e278f147a2d51bde35cefad6790/src/assets/images/screenshots/screenshot1.png" width="1000" height="500"> |
 
 ## Built With &hearts;
 
