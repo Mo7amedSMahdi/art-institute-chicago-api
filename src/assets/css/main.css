@@ -119,7 +119,7 @@ input[type='reset'] {
   gap: var(--gap, 1rem);
 }
 
-.flex-column {
+.flex--column {
   flex-direction: column;
 }
 
@@ -133,6 +133,22 @@ input[type='reset'] {
   justify-content: flex-start;
   align-items: center;
   gap: 1rem;
+}
+
+.btn {
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+}
+
+.btn--primary {
+  border: 2px solid black;
+}
+
+.btn--icon {
+  display: block;
+  width: 29px;
+  padding: 0;
+  margin: 0;
 }
 
 /* Header Section */
@@ -149,6 +165,50 @@ header {
   margin-left: 0.3rem;
   font-size: 0.7rem;
   font-family: var(--ff-gotham);
+}
+
+/* Artworks Section */
+
+.artworks {
+  padding: 1.5rem 4rem;
+}
+
+.artworks-list {
+  grid-template-columns: repeat(3, 1fr);
+
+  --gap: 2rem;
+}
+
+.artwork {
+  align-items: center;
+  justify-content: flex-start;
+
+  --gap: 1rem;
+
+  padding: 1rem;
+}
+
+.artwork-body {
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+
+.artwork-body h2 {
+  flex: 1.8 0 0;
+}
+
+.body-likes {
+  justify-content: center;
+  align-items: center;
+}
+
+.body-likes p {
+  text-align: center;
+}
+
+.artwork-body button {
+  flex: 0.2 0 0;
 }
 
 .footer {
