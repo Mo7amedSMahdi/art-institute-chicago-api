@@ -29,7 +29,7 @@ const showModal = async (artworkId) => {
                     </div>
                 </div>
             </div>
-            <div class="modal-content">
+            <div class="modal-content flex flex--column">
                 <div class="artwork-desc flex flex--column">
                     <div class="flex">
                         <p>Artist: ${result.data.artist_title}</p>
@@ -38,6 +38,17 @@ const showModal = async (artworkId) => {
                     <div class="flex">
                         <p>Start Date: ${result.data.date_start}</p>
                         <p>End Date: ${result.data.date_end}</p>
+                    </div>
+                </div>
+                <div class="comments flex flex--column">
+                    <h2> Comments (2)</h2>
+                    <div class="comment-list flex flex--column">
+                    <div class="comment">
+                        <p>2022-04-22 Jane: Hello</p>
+                    </div>
+                    <div class="comment">
+                        <p>2022-04-22 Jane: Hello</p>
+                    </div>
                     </div>
                 </div>
             </div>
