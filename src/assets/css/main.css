@@ -114,6 +114,14 @@ input[type='reset'] {
 
 /* Utility classes */
 
+.hidden {
+  display: none !important;
+}
+
+.no-scroll {
+  overflow: hidden !important;
+}
+
 .flex {
   display: flex;
   gap: var(--gap, 1rem);
@@ -135,6 +143,22 @@ input[type='reset'] {
   gap: 1rem;
 }
 
+.btn {
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+}
+
+.btn--primary {
+  border: 2px solid black;
+}
+
+.btn--icon {
+  display: block;
+  width: 29px;
+  padding: 0;
+  margin: 0;
+}
+
 /* Header Section */
 
 header {
@@ -151,7 +175,7 @@ header {
   font-family: var(--ff-gotham);
 }
 
-/* Header Section */
+/* Artworks Section */
 
 .artworks {
   padding: 1.5rem 4rem;
@@ -178,9 +202,68 @@ header {
   width: 100%;
 }
 
-.artwork-body img {
-  max-width: 24px;
+.artwork-body h2 {
+  flex: 1.8 0 0;
 }
+
+.body-likes {
+  justify-content: center;
+  align-items: center;
+}
+
+.body-likes p {
+  text-align: center;
+}
+
+.artwork-body button {
+  flex: 0.2 0 0;
+}
+
+.modal {
+  padding: 3rem 4.8rem;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.5);
+  overflow: auto;
+}
+
+.modal-dialog {
+  max-width: 60%;
+  margin-inline: auto;
+}
+
+.close-modal {
+  float: right;
+  margin: 0 1rem;
+}
+
+.header-content {
+  justify-content: center;
+  align-items: center;
+}
+
+.artwork-desc {
+  justify-content: center;
+  align-items: center;
+}
+
+.artwork-desc div {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer {
+  padding: 2rem 3rem;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(88, 84, 84);
+  color: white;
+}
+<<<<<<< HEAD
 
 .footer {
   position: fixed;
@@ -191,3 +274,5 @@ header {
   background-color: rgb(88, 84, 84);
   color: white;
 }
+=======
+>>>>>>> c1904e6f85f2f12bb5d56728b3cf1882cebe9ef7
