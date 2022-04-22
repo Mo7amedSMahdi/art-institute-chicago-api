@@ -1,5 +1,5 @@
 import { getArtWorks, addLike, getLikes } from './ServiceCall.js';
-import { showModal } from './pupup.js';
+import { renderModal } from './pupup.js';
 
 const container = document.querySelector('.artworks-list');
 let likeButtons;
@@ -46,7 +46,7 @@ const renderArtworks = async () => {
 
   commentButtons.forEach((btn) => {
     btn.addEventListener('click', () => {
-      showModal(btn.dataset.id);
+      renderModal(btn.dataset.id);
     });
   });
 

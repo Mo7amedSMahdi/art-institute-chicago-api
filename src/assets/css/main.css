@@ -273,6 +273,22 @@ header {
   align-items: flex-start;
 }
 
+.add-comment {
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.add-comment h2 {
+  width: 100%;
+  text-align: center;
+}
+
+.add-comment-form {
+  justify-content: center;
+  align-items: flex-start;
+}
+
 .footer {
   padding: 2rem 3rem;
   bottom: 0;
