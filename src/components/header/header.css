@@ -1,0 +1,13 @@
+header {
+  padding: 1.5rem 4rem;
+  align-items: center;
+  justify-content: flex-start;
+
+  --gap: 2rem;
+}
+
+.header-nav span {
+  margin-left: 0.3rem;
+  font-size: 0.7rem;
+  font-family: var(--ff-gotham);
+}
