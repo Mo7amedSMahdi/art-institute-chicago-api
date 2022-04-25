@@ -1,97 +1,70 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# Getting Started with Create React App
 
-# Art Institute Chicago api
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-The Art Institute of Chicago's API provides JSON-formatted data as a REST-style service that allows developers to explore and integrate the museum’s public data into their projects. This API is the same tool that powers their website, their mobile app, and many other technologies in the museum.
+## Available Scripts
 
-<h2 align="center">
-  Screen Shots 📝
-</h2>
+In the project directory, you can run:
 
-|                                                                                       **Interface 1**                                                                                        |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| <img src="https://github.com/Mo7amedSMahdi/art-institute-chicago-api/blob/2bf50a50a71b2e278f147a2d51bde35cefad6790/src/assets/images/screenshots/screenshot2.png" width="1000" height="500"> |
+### `npm start`
 
-|                                                                                       **Interface 2**                                                                                        |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| <img src="https://github.com/Mo7amedSMahdi/art-institute-chicago-api/blob/2bf50a50a71b2e278f147a2d51bde35cefad6790/src/assets/images/screenshots/screenshot1.png" width="1000" height="500"> |
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Built With &hearts;
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-- HTML
-- CSS
-- JavaScript
-- ES6 Syntax.
-- webpack.
+### `npm test`
 
-## Live Demo
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-![Live demo](https://mo7amedsmahdi.github.io/art-institute-chicago-api/)
+### `npm run build`
 
-## Getting Started
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-To get a local copy up and running follow these setup steps.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-**Setup**
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- Open terminal and clone the project: `git clone git@github.com:Mo7amedSMahdi/art-institute-chicago-api.git`
-- cd into the directory `art-institute-chicago-api`
+### `npm run eject`
 
-**Prerequisites**
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-- You need to have `node.js` installed in your system
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-**Install**
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-- On your terminal run :
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-```sh
-  npm install
-```
+## Learn More
 
-- then build :
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-```sh
-npm run build
-```
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-- In case you run into any errors please raise an [issue](https://github.com/Mo7amedSMahdi/art-institute-chicago-api/issues).
+### Code Splitting
 
-**Usage**
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-- To run the application:
+### Analyzing the Bundle Size
 
-```sh
-npm run start
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-```
+### Making a Progressive Web App
 
-## Authors
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-👤 **Mohammed Salah**
+### Advanced Configuration
 
-- GitHub: [@Mo7amedSMahdi](https://github.com/Mo7amedSMahdi)
-- Twitter: [@devMo7amed](https://twitter.com/devMo7amed)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohammed-mahdi-b20340162/)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-## 🤝 Contributing
+### Deployment
 
-Contributions, issues, and feature requests are welcome!
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-Feel free to check the [issues page](../../issues/).
+### `npm run build` fails to minify
 
-## Show your support
-
-Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Microverse program
-- My standup team
-- Microverse team
-- My family's support
-
-## Credit
-
-The original Api that we use to retrive the artworks data from is [Art Institute of Chicago API](https://api.artic.edu/docs/)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
