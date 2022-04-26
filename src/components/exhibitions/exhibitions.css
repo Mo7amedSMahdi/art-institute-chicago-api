@@ -1,0 +1,30 @@
+.exhibitions {
+  padding: 6.875rem 4.875rem;
+
+  --gap: 3.75rem;
+}
+
+.exhibitions-header {
+  justify-content: space-between;
+}
+
+.header-title {
+  background-image: url(http://localhost:3000/static/media/bg-gray.7cf2bc8….svg);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: auto 30px;
+}
+
+.exhibitions-list {
+  grid-template-columns: repeat(3, 1fr);
+
+  --gap: 3.75rem;
+}
+
+.exhibition {
+}
+
+.exhibition-header img {
+  min-height: 493px;
+  object-fit: cover;
+}
