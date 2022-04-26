@@ -1,10 +1,14 @@
-@import url('http://fonts.cdnfonts.com/css/gotham');
-@import url('http://fonts.cdnfonts.com/css/poppins');
+@import url('http://fonts.cdnfonts.com/css/sugo-pro-classic-trial');
+@import url('http://fonts.cdnfonts.com/css/roboto');
 
 :root {
+  /* Colors */
+  --clr-light: #f9f9f9;
+  --clr-dark: #394149;
+
   /* font families */
-  --ff-gotham: 'Gotham', sans-serif;
-  --ff-poppins: 'Poppins', sans-serif;
+  --ff-sugo: 'Sugo Pro Classic Trial', sans-serif;
+  --ff-roboto: 'Roboto', sans-serif;
 }
 
 /* RESET */
@@ -54,7 +58,7 @@ html:focus-within {
 body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  font-family: var(--ff-poppins);
+  font-family: var(--ff-roboto);
   scroll-behavior: smooth;
 }
 
@@ -86,7 +90,8 @@ input:focus {
 /* Remove default button styles */
 button,
 input[type='submit'],
-input[type='reset'] {
+input[type='reset'],
+input[type='search'] {
   background: none;
   color: inherit;
   border: none;
