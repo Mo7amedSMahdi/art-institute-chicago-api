@@ -6,7 +6,7 @@ import { faBars, faSearch } from '@fortawesome/free-solid-svg-icons';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.querySelector('body'));
 library.add(faBars, faSearch);
 
 root.render(

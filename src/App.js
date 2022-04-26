@@ -1,9 +1,16 @@
-import logo from './assets/logo.svg';
 import './App.css';
 import Header from './components/header/header';
+import Intro from './components/intro/Intro';
 
 function App() {
-  return <Header logo={logo} />;
+  return (
+    <>
+      <Header />
+      <main>
+        <Intro />
+      </main>
+    </>
+  );
 }
 
 export default App;

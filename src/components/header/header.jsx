@@ -21,10 +21,8 @@ const Menu = (props) => (
 class Header extends Component {
   state = { clicked: false };
 
-  handelClick = (e) => {
+  handelClick = () => {
     this.setState({ clicked: !this.state.clicked });
-    const nav = e.target.parentNode.parentElement.querySelector('.nav--main');
-    console.log(nav);
   };
 
   render() {
