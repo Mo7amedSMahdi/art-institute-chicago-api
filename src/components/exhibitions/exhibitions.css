@@ -1,32 +1,11 @@
-.card-section {
+.exhibitions {
   padding: 6.875rem 4.875rem;
-  justify-content: center;
-  align-items: center;
 
   --gap: 3.75rem;
 }
 
-.section-header {
+.exhibitions-header {
   justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.header-title h2 {
-  font-family: var(--ff-sugo);
-  font-style: normal;
-  font-weight: 300;
-  font-size: 2.5rem;
-  letter-spacing: 0.3rem;
-}
-
-.header-title h2::after {
-  content: '';
-  display: block;
-  width: 50%;
-  height: 3px;
-  background-color: #000;
-  margin-inline-start: 50%;
 }
 
 .header-title {
@@ -36,79 +15,16 @@
   background-size: auto 30px;
 }
 
-.header-link {
-  font-family: var(--ff-sugo);
-  font-size: 1.6rem;
-  font-weight: 300;
-  letter-spacing: 0.1rem;
-
-  --gap: 0.5rem;
-}
-
-.header-link a::after {
-  content: '';
-  display: block;
-  width: 50%;
-  height: 3px;
-  background-color: #000;
-}
-
-.card-list {
+.exhibitions-list {
   grid-template-columns: repeat(3, 1fr);
 
   --gap: 3.75rem;
 }
 
-.card {
-  --gap: 1rem;
-
-  background: #fff;
+.exhibition {
 }
 
-.card-header img {
+.exhibition-header img {
   min-height: 493px;
   object-fit: cover;
-}
-
-.card-header h3 {
-  font-family: var(--ff-sugo);
-  font-size: 1.5rem;
-  font-weight: 300;
-  letter-spacing: 0.1rem;
-}
-
-.card-header::after {
-  content: '';
-  display: block;
-  width: 35%;
-  height: 2px;
-  background-color: #000;
-}
-
-.card-body p {
-  font-family: var(--ff-roboto);
-  font-size: 1rem;
-  font-weight: 300;
-}
-
-.card-body span {
-  font-weight: 600;
-}
-
-@media screen and (max-width: 768px) {
-  .card-section {
-    padding: 6.875rem 4rem;
-
-    --gap: 3.75rem;
-  }
-
-  .card-list {
-    grid-template-columns: repeat(2, 1fr);
-
-    --gap: 2.5rem;
-  }
-
-  .card-header img {
-    min-height: 383px;
-  }
 }
