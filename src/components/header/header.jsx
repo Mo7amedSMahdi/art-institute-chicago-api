@@ -21,7 +21,7 @@ const Menu = (props) => (
 class Header extends Component {
   state = { clicked: false };
 
-  handelClick = () => {
+  handelClick = (e) => {
     this.setState({ clicked: !this.state.clicked });
   };
 
@@ -31,7 +31,7 @@ class Header extends Component {
         <div className="header-logo">
           <img src={Logo} alt="Logo brand" />
         </div>
-        <nav className="nav">
+        <nav className="nav-container">
           <Menu cName="nav nav--main" />
           <button
             type="button"
