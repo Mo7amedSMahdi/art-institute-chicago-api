@@ -1,27 +1,8 @@
 import React from 'react';
 import './exhibitions.css';
-import ApiCall from '../../api/apiCall';
+import Image from '../general/Image';
 
-const Image = (props) => {
-  const url = `https://www.artic.edu/iiif/2/${props.id}/full/843,/0/default.jpg`;
-  return <img src={url} alt={props.alt} />;
-};
-
-const Exhibitions = () => {
-  const [data, setData] = React.useState([]);
-
-  React.useEffect(() => {
-    ApiCall('exhibitions?limit=20', 'GET')
-      .then((json) => {
-        setData(
-          json.data
-            .filter((el) => el.image_id !== null && el.type !== null)
-            .splice(0, 3),
-        );
-      })
-      .catch((error) => console.log(`error::${error}`));
-  }, []);
-
+const Exhibitions = (props) => {
   return (
     <section className="card-section flex flex--column" id="exhibitions">
       <div className="section-header flex">
@@ -36,7 +17,7 @@ const Exhibitions = () => {
         </div>
       </div>
       <div className="card-list grid">
-        {data.map((el) => (
+        {props.data.map((el) => (
           <div key={el.id} className="card flex flex--column">
             <div className="card-header flex flex--column">
               <Image id={el.image_id} alt={el.title} />
