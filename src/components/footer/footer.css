@@ -9,3 +9,7 @@ footer {
   letter-spacing: 0.2;
   padding: 1.5rem;
 }
+
+footer a {
+  text-decoration: underline;
+}
