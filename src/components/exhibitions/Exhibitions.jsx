@@ -20,7 +20,8 @@ const Exhibitions = (props) => {
         {props.data.map((el) => (
           <div key={el.id} className="card flex flex--column">
             <div className="card-header flex flex--column">
-              <Image id={el.image_id} alt={el.title} />
+              {/* <Image id={el.image_url} alt={el.title} /> */}
+              <img src={el.image_url} alt={el.title} />
             </div>
             <div className="card-body flex flex--column">
               <h3>{el.title}</h3>

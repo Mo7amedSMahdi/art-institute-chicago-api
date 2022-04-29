@@ -23,9 +23,14 @@ const Intro = (props) => {
   return (
     <section id="Intro" className="intro">
       {props.data.length > 0 ? (
-        <Image
-          cName="intro-image"
-          id={props.data[randomIndex].image_id}
+        // <Image
+        //   cName="intro-image"
+        //   id={props.data[randomIndex].image_id}
+        //   alt={props.data[randomIndex].title}
+        // />
+        <img
+          className="intro-image"
+          src={props.data[randomIndex].image_url}
           alt={props.data[randomIndex].title}
         />
       ) : (

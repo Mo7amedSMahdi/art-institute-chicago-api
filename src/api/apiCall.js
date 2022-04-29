@@ -1,16 +1,20 @@
 const baseUrl = 'https://api.artic.edu/api/v1/';
 const appID = 'Ea05s8iIppToZ9bgBQcY';
 const involvmentUrl = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appID}/`;
+import axios from 'axios';
 
-const ApiCall = async (url, method, body) => {
+const ApiCall = async (url, method, body = null) => {
   if (method === 'GET') {
-    const response = await fetch(`${baseUrl}${url}/`, {
-      method: method,
-      headers: { 'Content-Type': 'application/json' },
-    })
-      .then((response) => response)
-      .catch((error) => error);
-    return response.json();
+    const response = await axios.get(`${baseUrl}${url}/`).then((res) => {
+      return res.data;
+    });
+    // const response = await fetch(`${baseUrl}${url}/`, {
+    //   method: method,
+    //   headers: { 'Content-Type': 'application/json' },
+    // })
+    //   .then((response) => response)
+    //   .catch((error) => error);
+    return response;
   } else {
     const response = await fetch(`${baseUrl}/${url}/`, {
       method: method,
