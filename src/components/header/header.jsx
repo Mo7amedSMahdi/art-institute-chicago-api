@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import MenuItems from './MenuItems';
 import Logo from '../../assets/logo.svg';
 import './header.css';
+import { faWindowRestore } from '@fortawesome/free-solid-svg-icons';
 
 const Menu = (props) => (
   <ul className={props.cName}>
@@ -23,6 +24,9 @@ class Header extends Component {
 
   handelClick = () => {
     this.setState({ clicked: !this.state.clicked });
+    this.state.clicked
+      ? (document.documentElement.style.overflow = 'auto')
+      : (document.documentElement.style.overflow = 'hidden');
   };
 
   render() {
@@ -36,7 +40,7 @@ class Header extends Component {
           <button
             type="button"
             onClick={this.handelClick}
-            className="btn--menu hidden"
+            className="btn--menu"
           >
             <i
               className={

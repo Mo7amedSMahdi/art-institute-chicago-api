@@ -1,30 +1,151 @@
-.exhibitions {
-  padding: 6.875rem 4.875rem;
+.card-section {
+  padding: 2.5rem 1.5rem;
+  justify-content: center;
+  align-items: center;
 
   --gap: 3.75rem;
 }
 
-.exhibitions-header {
-  justify-content: space-between;
+.section-header {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-.header-title {
-  background-image: url(http://localhost:3000/static/media/bg-gray.7cf2bc8….svg);
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  background-size: auto 30px;
+.header-title h2 {
+  font-family: var(--ff-righteous);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
 }
 
-.exhibitions-list {
-  grid-template-columns: repeat(3, 1fr);
-
-  --gap: 3.75rem;
+.header-title h2::after {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 3px;
+  background-color: #000;
+  margin-inline: auto;
 }
 
-.exhibition {
+.link-desktop {
+  display: none;
 }
 
-.exhibition-header img {
-  min-height: 493px;
+.header-link {
+  font-family: var(--ff-righteous);
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  justify-content: center;
+  align-items: center;
+
+  --gap: 0.5rem;
+}
+
+.header-link a::after {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 3px;
+  background-color: #000;
+}
+
+.card-list {
+  grid-template-columns: repeat(1, 1fr);
+
+  --gap: 2rem;
+}
+
+.card {
+  --gap: 1rem;
+
+  background: #fff;
+}
+
+.card-header {
+  position: relative;
+  height: 120vw;
+  width: 100%;
+  max-height: 75vh;
+}
+
+.card-header img {
   object-fit: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.card-body h3 {
+  font-family: var(--ff-righteous);
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+}
+
+.card-body h3::after {
+  content: '';
+  display: block;
+  width: 35%;
+  height: 2px;
+  background-color: #000;
+}
+
+.card-body p {
+  font-family: var(--ff-roboto);
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.card-body span {
+  font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+  .card-section {
+    padding: 4.5rem 2.5rem;
+
+    --gap: 3.75rem;
+  }
+
+  .section-header {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .link-desktop {
+    display: inline-flex;
+  }
+
+  .link-mobile {
+    display: none;
+  }
+
+  .card-list {
+    grid-template-columns: repeat(2, 1fr);
+
+    --gap: 2rem;
+  }
+
+  .card-header {
+    max-height: 50vh;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card-section {
+    padding: 6.875rem 4.875rem;
+  }
+
+  .card-list {
+    grid-template-columns: repeat(3, 1fr);
+
+    --gap: 2rem;
+  }
 }

@@ -1,38 +1,15 @@
 .header {
-  padding: 1.5rem 4rem;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
   align-items: center;
-  justify-content: flex-start;
-
-  --gap: 2rem;
 }
 
-.header-nav span {
-  margin-left: 0.3rem;
-  font-size: 0.7rem;
-  font-family: var(--ff-gotham);
-}
-
-.nav--main {
-  font-family: var(--ff-sugo);
-  font-size: 1.5rem;
-  font-weight: 300;
-}
-
-.nav--mobile {
-  flex-direction: column;
-  position: absolute;
-  top: 125px;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  justify-content: flex-start;
-  /* backdrop-filter: blur(8px); */
-  font-size: 2.5rem;
-  animation: effect-block 2s cubic-bezier(0.19, 1, 0.22, 1);
+.btn--menu {
+  display: inline-flex;
 }
 
 .header-search {
-  display: inline-flex;
+  display: none;
   gap: 1rem;
   background: var(--clr-light);
   padding: 0.5rem;
@@ -53,30 +30,51 @@
   color: var(--clr-dark);
 }
 
-@media screen and (max-width: 376px) {
+.nav--main {
+  font-family: var(--ff-righteous);
+  font-size: 1.5rem;
+  font-weight: 300;
+  display: none;
+}
+
+.nav--mobile {
+  flex-direction: column;
+  position: fixed;
+  top: 72px;
+  left: 0;
+  padding-top: 8rem;
+  color: var(--clr-white);
+  width: 100%;
+  height: 100vh;
+  justify-content: flex-start;
+  font-size: 2.5rem;
+  animation: effect-block 2s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(5px);
+}
+
+.no-scroll {
+  overflow: hidden !important;
+}
+
+@media screen and (min-width: 768px) {
+  .btn--menu {
+    display: none !important;
+  }
+
   .header {
-    justify-content: space-between;
+    justify-content: flex-start;
+
+    --gap: 2rem;
   }
 
   .nav--main {
-    display: none;
-  }
-
-  .btn--menu {
-    display: inline-flex !important;
+    display: inline-flex;
   }
 
   .header-search {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .header {
-    padding: 1.5rem 2.188rem;
-  }
-
-  .header-search {
+    display: inline-flex;
     justify-content: flex-end;
     background: #fff;
     width: auto;
@@ -90,5 +88,16 @@
 
   .header-search input {
     display: none;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .header-search {
+    justify-content: flex-start;
+    background: var(--clr-light);
+  }
+
+  .header-search input {
+    display: block;
   }
 }

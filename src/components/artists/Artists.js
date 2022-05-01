@@ -1,16 +1,16 @@
 import React from 'react';
 
-const Artworks = () => {
+const Artists = () => {
   return (
-    <section className="card-section flex flex--column" id="artworks">
+    <section className="card-section flex flex--column" id="artists">
       <div className="section-header flex">
         <div className="header-title">
-          <h2>Artworks</h2>
+          <h2>Artists</h2>
         </div>
         <div className="link-desktop">
           <div className="header-link flex">
             <a href="#" className="section-link">
-              All artworks
+              All artists
             </a>
             <i className="ri-arrow-right-line" />
           </div>
@@ -90,7 +90,7 @@ const Artworks = () => {
         <div className="link-mobile">
           <div className="header-link flex">
             <a href="#" className="section-link">
-              All artworks
+              All artists
             </a>
             <i className="ri-arrow-right-line" />
           </div>
@@ -100,4 +100,4 @@ const Artworks = () => {
   );
 };
 
-export default Artworks;
+export default Artists;
